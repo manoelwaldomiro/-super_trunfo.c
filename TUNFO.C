@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//novocomit
 int main() {
     // --- Carta 1 ---
     char estado1;
