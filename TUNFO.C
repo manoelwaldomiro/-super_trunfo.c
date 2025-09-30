@@ -1,5 +1,5 @@
 #include <stdio.h>
-//novocomit
+//novocomit2
 int main() {
     // --- Carta 1 ---
     char estado1;
@@ -18,6 +18,7 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    int escolha;
 
     // --- Entrada de dados da Carta 1 ---
     printf("Cadastro da Carta 1:\n");
@@ -87,6 +88,34 @@ int main() {
     printf("Area: %.2f km²\n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+
+    
+
+ // Entrada simplificada só com dois atributos
+    printf("Digite a populacao da Carta 1: ");
+    scanf("%d", &populacao1);
+    printf("Digite o PIB da Carta 1: ");
+    scanf("%f", &pib1);
+
+    printf("\nDigite a populacao da Carta 2: ");
+    scanf("%d", &populacao2);
+    printf("Digite o PIB da Carta 2: ");
+    scanf("%f", &pib2);
+
+    printf("\nEscolha o atributo principal para comparacao:\n");
+    printf("1 - Populacao\n");
+    printf("2 - PIB\n");
+    printf("Opcao: ");
+    scanf("%d", &escolha);
+
+    // Comparacao usando operador ternario
+    (escolha == 1) 
+        ? printf(populacao1 > populacao2 ? "Carta 1 venceu pela populacao!\n" :
+                                           populacao2 > populacao1 ? "Carta 2 venceu pela populacao!\n" :
+                                                                     "Empate em populacao!\n")
+        : printf(pib1 > pib2 ? "Carta 1 venceu pelo PIB!\n" :
+                               pib2 > pib1 ? "Carta 2 venceu pelo PIB!\n" :
+                                             "Empate em PIB!\n");
 
     return 0;
 }
